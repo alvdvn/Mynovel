@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Text, TextInput, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, TextInput, View, StyleSheet, Image, TouchableOpacity, TouchableHighlight, SafeAreaView } from 'react-native';
 import { Dimensions } from "react-native";
 const width = Dimensions.get('window').width;
 const SearchBox = (props) => {
-    const [text, SetText] = useState('')
-    const display = text === '' ? 'none' : 'flex'
+    const [text, SetText] = useState("")
+    const display = text === ""? 'none' : 'flex'
+    const onPressClose = () =>{
+        SetText("")
+    }
 
     return (
         <View style={styles.inputSearch}>
@@ -13,14 +16,15 @@ const SearchBox = (props) => {
                 <TextInput
                     maxLength={1000}
                     multiline={true}
-                    onChangeText={newtext => {
+                    onChangeText={(newtext) => {
                         SetText(newtext)
 
                     }}
+                    value={text}
                     style={styles.searchQuerry}
                     placeholder={'nhập tên truyện, tên tác giả'}
                 />
-                <TouchableOpacity style={styles.iconClose}>
+                <TouchableOpacity style={styles.iconClose} onPress={onPressClose} >
                     <Image source={require('../../images/close.png')} style={[styles.iconClose, { display: display }]} />
                 </TouchableOpacity>
             </View>
@@ -30,6 +34,7 @@ const SearchBox = (props) => {
 
 const styles = StyleSheet.create({
     inputSearch: {
+        backgroundColor:'#fffbff',
         paddingVertical: 10,
         marginLeft: 10,
         alignItems: 'center',

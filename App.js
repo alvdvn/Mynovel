@@ -84,7 +84,7 @@ const App: () => Node = () => {
     //   </Stack.Navigator>
     // </NavigationContainer>
     <NavigationContainer >
-      <Tab.Navigator initialRouteName="home" screenOptions={{ headerShown: false, tabBarStyle: { height: 70 } }}>
+      <Tab.Navigator initialRouteName="home" screenOptions={{ headerShown: false, tabBarStyle: { height: 70,flex: 1 } }}>
         <Tab.Screen
           name="Trang chủ"
           component={HomeScreen}

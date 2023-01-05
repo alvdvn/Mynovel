@@ -91,8 +91,6 @@ const ListUpdate = (props) => {
 
     const [listNovelUpdate, SetListNovelUpdate] = useState(ListNovel);
     const [SelectedID, SetSelectID] = useState(null)
-
-
     const renderItem = ({ item }) => {
 
         return (
