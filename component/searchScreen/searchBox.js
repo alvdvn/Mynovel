@@ -4,8 +4,8 @@ import { Dimensions } from "react-native";
 const width = Dimensions.get('window').width;
 const SearchBox = (props) => {
     const [text, SetText] = useState("")
-    const display = text === ""? 'none' : 'flex'
-    const onPressClose = () =>{
+    const display = text === "" ? 'none' : 'flex'
+    const onPressClose = () => {
         SetText("")
     }
 
@@ -34,7 +34,7 @@ const SearchBox = (props) => {
 
 const styles = StyleSheet.create({
     inputSearch: {
-        backgroundColor:'#fffbff',
+        backgroundColor: '#fffbff',
         paddingVertical: 10,
         marginLeft: 10,
         alignItems: 'center',

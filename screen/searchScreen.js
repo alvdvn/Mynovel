@@ -6,24 +6,24 @@ import SearchBox from "../component/searchScreen/searchBox";
 import SimpleSearch from "../component/searchScreen/simpleSearch";
 const SearchScreen = () => {
     const [display, setDisplay] = useState('true');
-  
+
 
 
     const AlowAdvancedSearch = (display) => {
-       setDisplay(display)
+        setDisplay(display)
     }
-    const AllowSimpleSearch = (display) =>{
+    const AllowSimpleSearch = (display) => {
         setDisplay(display)
     }
 
     return (
         <View style={styles.container}>
             <SearchBox />
-            <SimpleSearch 
+            <SimpleSearch
                 AlowAdvancedSearch={AlowAdvancedSearch}
-                display={display}/>
-            <AdvancedSearch 
-                display={display} 
+                display={display} />
+            <AdvancedSearch
+                display={display}
                 AllowSimpleSearch={AllowSimpleSearch} />
         </View>
     )

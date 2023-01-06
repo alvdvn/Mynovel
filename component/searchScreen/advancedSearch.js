@@ -200,7 +200,7 @@ let ListChapter = [{ id: 1, des: 'Toàn bộ' }, { id: 2, des: 'ít hơn 50' },
 { id: 9, des: 'ít hơn 1000' }, { id: 10, des: 'lớn hơn 1000' },]
 const Item = ({ cate, selectID, onPressItem }) => {
     return (
-        <TouchableHighlight style={cate.id === selectID ? styles.containerItemPick : styles.containerItem} onPress={onPressItem} >
+        <TouchableHighlight style={cate.id === selectID ? styles.containerItemPick : styles.containerItem} onPress={onPressItem} underlayColor={'#545c69'}>
             <Text style={[styles.textItem, { color: '#ffffff' }]}>{cate.des}</Text>
         </TouchableHighlight>
     )
@@ -216,6 +216,12 @@ const AdvancedSearch = (props) => {
     const AllowSimpleSearch = () => {
         props.AllowSimpleSearch && props.AllowSimpleSearch('true');
 
+    }
+    const onPressReset = () => {
+        setSelectID(1)
+        setSelectStatusID(1)
+        setSelectCategoryID(1)
+        setSelectChapterID(1)
     }
     useEffect(() => {
         if (displayUpdate == "false") {
@@ -276,8 +282,8 @@ const AdvancedSearch = (props) => {
 
     return (
         <View style={[styles.container]}>
-            <ScrollView style={[styles.containerCategory, { display: display },]} contentContainerStyle={{alignItems:'center',}}>
-                <TouchableOpacity style={styles.btnReset}>
+            <ScrollView style={[styles.containerCategory, { display: display },]} contentContainerStyle={{ alignItems: 'center', }}>
+                <TouchableOpacity style={styles.btnReset} onPress={onPressReset}>
                     <Text>Reset</Text>
                 </TouchableOpacity>
                 <View style={styles.conTainerListchoice}>
@@ -304,8 +310,8 @@ const AdvancedSearch = (props) => {
                         {ItemListChapter}
                     </View>
                 </View>
-                <TouchableHighlight style={[styles.containerButton,]} onPress={AllowSimpleSearch}  underlayColor={"#ffffff"}>
-                    <Text style={styles.titleButton}>Tìm kiếm cơ bản</Text>
+                <TouchableHighlight style={[styles.containerButton,]} onPress={AllowSimpleSearch} underlayColor={"#ffffff"}>
+                    <Text style={styles.titleButton}>Số chương</Text>
                 </TouchableHighlight>
 
             </ScrollView>
@@ -322,14 +328,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#fffbff'
     },
     containerButton: {
-        alignItems:'center',
+        alignItems: 'center',
         marginVertical: 20,
-        paddingHorizontal:16,
-        paddingVertical:12,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
         borderRadius: 32,
         borderColor: 'blue',
         borderWidth: 1,
-        flex:1
+        flex: 1
     },
     conTainerListchoice: {
         alignSelf: 'baseline',

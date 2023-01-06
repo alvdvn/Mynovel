@@ -110,14 +110,14 @@ const App: () => Node = () => {
               paddingBottom: 8
             },
             tabBarIcon: () => (
-              <Image name="Trang chủ" source={require('./images/search_icon.png')} style={styles.iconTab} />
+              <Image name="Tìm Kiếm" source={require('./images/search_icon.png')} style={styles.iconTab} />
             ),
           }}
         />
         <Tab.Screen name="kệ sách"
           component={BookShelfScreen}
           options={{
-            tabBarLabel: 'Trang chủ',
+            tabBarLabel: 'Kệ Sách',
             tabBarLabelStyle: {
               fontSize: 14,
               paddingBottom: 8

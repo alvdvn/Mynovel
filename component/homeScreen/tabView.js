@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, useWindowDimensions, Text, StyleSheet, Easing } from "react-native";
+import { View, useWindowDimensions, Text, StyleSheet } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import Category from "./category";
 import ListComposed from "./composed";
