@@ -1,5 +1,5 @@
 {
-  "name": "MyNovel",
+  "name": "mynovel",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-firebase/app": "^16.5.0",
+    "@react-native-firebase/auth": "^16.5.0",
     "@react-navigation/bottom-tabs": "^6.5.2",
     "@react-navigation/material-bottom-tabs": "^6.2.10",
     "@react-navigation/native": "^6.1.1",
@@ -35,5 +37,18 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "mynovel",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvdvn/Mynovel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvdvn/Mynovel/issues"
+  },
+  "homepage": "https://github.com/alvdvn/Mynovel#readme"
 }

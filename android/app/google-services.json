@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "586608817945",
+    "project_id": "mynovel-2a012",
+    "storage_bucket": "mynovel-2a012.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586608817945:android:b6c2bf843cb643f28a7788",
+        "android_client_info": {
+          "package_name": "com.mynovel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586608817945-m4vmck7aon11tig8assn7ldmkt666haa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mynovel",
+            "certificate_hash": "c7ece0cffa709bb0a41dc13e398843743478bd1d"
+          }
+        },
+        {
+          "client_id": "586608817945-n43a9k66b3p0sbp6knhkj24c4410piv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjDkwU4HGgHLsHOoUWMbFP9APDkV-ijtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586608817945-n43a9k66b3p0sbp6knhkj24c4410piv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
